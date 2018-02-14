@@ -1,10 +1,10 @@
-var simonSays = []
-var userInput = []
-var round = 0
+var simonSays = [];
+var userInput = [];
+var round = 0;
 
 // start sequence
 var start = document.getElementById('start').addEventListener('click', function () {
-    simonSays.push(Math.floor(Math.random()*4)+1)   // equals to whole numbers < 4
+    simonSays.push(Math.floor(Math.random()*4)+1);   // equals to whole numbers < 4
     for(var i = 1; i <= simonSays.length; i++) {
         var circleId = 'circle' + simonSays[i - 1]
         window.setTimeout(function(){               // "lights"
@@ -13,37 +13,79 @@ var start = document.getElementById('start').addEventListener('click', function 
             }, i * 500)
             document.getElementById(circleId).style.opacity = '.5'
         }, i * 500)
-    }
+    };
 })
 
 // quit button; resets arrays
 var quit = document.getElementById('quit').addEventListener('click', function () {
-    simonSays = []
-    userInput = []
+    simonSays = [];
+    userInput = [];
 })
 
 // users' action
 var userAnswer = function () {
     for(var i = 0; i < userInput.length; i++) {     // checks the user's answer; if incorrect user loses
         if (userInput[i] != simonSays[i]){
-            console.log('Sorry, you lose.')
+            console.log('Sorry, you lose.');
             return;
         }
     }
-    console.log('Congratulations, you win!')    // breaks out the for loop; prints winner.
+    console.log('Congratulations, you win!');    // breaks out the for loop; prints winner.
 }
 
-var circleBtnOne = document.querySelector('#circle1').addEventListener('click', function () {       // function for circle1 from user
-    document.querySelector('#circle1').style.opacity = '0.5'
+var circleBtnOne = document.querySelector('#circle1').addEventListener('click', function () {       // function for circle1 from user action
+    document.querySelector('#circle1').style.opacity = '0.5';
     userInput.push(1);
     if(userInput.length === simonSays.length) {
         for(var i = 0; i < userInput.length; i++) {
             if (userInput[i] != simonSays[i]) {
-                console.log('Sorry, please play again.')
+                console.log('Sorry, please play again.');
                 return;    
             }
         }
-        console.log('Congratulations, you win!')
+        console.log('Congratulations, you win!');
     }
     
+})
+
+var circleBtnTwo = document.querySelector('#circle2').addEventListener('click', function () { // function for circle2 from user action
+    document.querySelector('#circle2').style.opacity = '0.5';
+    userInput.push(2);
+    if(userInput.length === simonSays.length) {
+        for(var i = 0; i < userInput.length; i++) {
+            if (userInput[i] != simonSays [i]) {
+                console.log('Sorry, please play again.');
+                return;
+            }
+        }
+        console.log('Congratulations, you win!');
+    };
+})
+
+var circleBtnThree = document.querySelector('#circle3').addEventListener('click', function () {
+    document.querySelector('#circle3').style.opacity = '0.5';
+    userInput.push(3);
+    if(userInput.length === simonSays.length) {
+        for(var i = 0; i < userInput.length; i++) {
+            if (userInput[i] != simonSays[i]) {
+                console.log('Sorry please play again.');
+                return;
+            }
+        }
+        console.log('Congratulations, you win!');
+    };
+})
+
+var circleBtnFour = document.querySelector('#circle4').addEventListener('click', function () {
+    document.querySelector('#circle4').style.opacity = '0.5';
+    userInput.push(4);
+    if(userInput.length === simonSays.length) {
+        for(var i = 0; i < userInput.length; i++) {
+            if(userInput[i] != simonSays[i]) {
+                console.log('Sorry, please play again.');
+                return;
+            }
+        }
+        console.log('Congratulations, you win!');
+    }
 })
