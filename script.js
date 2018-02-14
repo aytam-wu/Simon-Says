@@ -1,37 +1,49 @@
-// mouse entering and leaving - opacity
+var simonSays = []
+var userInput = []
+var round = 0
 
-var greenBtnEnter = document.querySelector('#circle').addEventListener('mouseenter', function () {
-    document.getElementById('circle').style.opacity = '1';
+// start sequence
+var start = document.getElementById('start').addEventListener('click', function () {
+    simonSays.push(Math.floor(Math.random()*4)+1)   // equals to whole numbers < 4
+    for(var i = 1; i <= simonSays.length; i++) {
+        var circleId = 'circle' + simonSays[i - 1]
+        window.setTimeout(function(){               // "lights"
+            window.setTimeout(function(){
+                document.getElementById(circleId).style.opacity = '1'
+            }, i * 500)
+            document.getElementById(circleId).style.opacity = '.5'
+        }, i * 500)
+    }
 })
 
-var greenBtnLeave = document.querySelector('#circle').addEventListener('mouseleave', function () {
-    document.getElementById('circle').style.opacity = '0.5';
+// quit button; resets arrays
+var quit = document.getElementById('quit').addEventListener('click', function () {
+    simonSays = []
+    userInput = []
 })
 
-var redBtnEnter = document.querySelector('#circle2').addEventListener('mouseenter', function () {
-    document.getElementById('circle2').style.opacity = '1';
+// users' action
+var userAnswer = function () {
+    for(var i = 0; i < userInput.length; i++) {     // checks the user's answer; if incorrect user loses
+        if (userInput[i] != simonSays[i]){
+            console.log('Sorry, you lose.')
+            return;
+        }
+    }
+    console.log('Congratulations, you win!')    // breaks out the for loop; prints winner.
+}
+
+var circleBtnOne = document.querySelector('#circle1').addEventListener('click', function () {       // function for circle1 from user
+    document.querySelector('#circle1').style.opacity = '0.5'
+    userInput.push(1);
+    if(userInput.length === simonSays.length) {
+        for(var i = 0; i < userInput.length; i++) {
+            if (userInput[i] != simonSays[i]) {
+                console.log('Sorry, please play again.')
+                return;    
+            }
+        }
+        console.log('Congratulations, you win!')
+    }
+    
 })
-
-var redBtnLeave = document.querySelector('#circle2').addEventListener('mouseleave', function () {
-    document.getElementById('circle2').style.opacity = '0.5';
-})
-
-var yellowBtnEnter = document.querySelector('#circle3').addEventListener('mouseenter', function () {
-    document.getElementById('circle3').style.opacity = '1';
-})
-
-var yellowBtnLeave = document.querySelector('#circle3').addEventListener('mouseleave', function () {
-    document.getElementById('circle3').style.opacity = '0.5';
-})
-
-var blueBtnEnter = document.querySelector('#circle4').addEventListener('mouseenter', function () {
-    document.getElementById('circle4').style.opacity = '1';
-})
-
-var blueBtnLeave = document.querySelector('#circle4').addEventListener('mouseleave', function () {
-    document.getElementById('circle4').style.opacity = '0.5';
-})
-
-// game sequence & speed
-
-
