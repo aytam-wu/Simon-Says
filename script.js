@@ -33,6 +33,48 @@ var userAnswer = function () {
     console.log('Congratulations, you win!');    // breaks out the for loop; prints winner.
 }
 
+var circleBtnOne = document.querySelector('#circle1').addEventListener('click', function () {
+    document.querySelector('#circle1').style.opacity = '0.5';
+    userInput.push(1);
+    for (var i = 0; i < userInput.length; i++) {
+        if(userInput.length != simonSays.length) {
+            console.log('Sorry, please play again.');
+        }
+    };
+})
+
+var circleBtnTwo = document.querySelector('#circle2').addEventListener('click', function () {
+    document.querySelector('#circle2').style.opacity = '0.5';
+    userInput.push(1);
+    for (var i = 0; i < userInput.length; i++) {
+        if(userInput.length != simonSays.length) {
+            console.log('Sorry, please play again.');
+        }
+    };
+})
+
+var circleBtnThree = document.querySelector('#circle3').addEventListener('click', function () {
+    document.querySelector('#circle3').style.opacity = '0.5';
+    userInput.push(1);
+    for (var i = 0; i < userInput.length; i++) {
+        if(userInput.length != simonSays.length) {
+            console.log('Sorry, please play again.');
+        }
+    };
+})
+
+var circleBtnFour = document.querySelector('#circle4').addEventListener('click', function () {
+    document.querySelector('#circle4').style.opacity = '0.5';
+    userInput.push(1);
+    for (var i = 0; i < userInput.length; i++) {
+        if(userInput.length != simonSays.length) {
+            console.log('Sorry, please play again.');
+        }
+    };
+})
+
+
+/* testing each button
 var circleBtnOne = document.querySelector('#circle1').addEventListener('click', function () {       // function for circle1 from user action
     document.querySelector('#circle1').style.opacity = '0.5';
     userInput.push(1);
@@ -89,3 +131,4 @@ var circleBtnFour = document.querySelector('#circle4').addEventListener('click',
         console.log('Congratulations, you win!');
     }
 })
+*/
