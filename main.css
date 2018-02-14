@@ -11,10 +11,17 @@ body {
     margin: 0% auto;
 }
 
-.circles {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.allCircles {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    grid-gap: 30px 95px;
+    border-radius: 50px;
+    cursor: pointer;  
+    opacity: 0.75;
+    height: 350px;
+    width: 350px;
+    margin: auto;
+    padding: 25px 0px 25px;
 }
 
 #circle {
@@ -22,8 +29,7 @@ body {
     padding: 75px;
     border-radius: 50px;
     border: 4px solid #40604e;
-    cursor: pointer;  
-    opacity: 0.5;
+    grid-column: 1 span 1;
 }
 
 #circle2 {
@@ -31,17 +37,15 @@ body {
     padding: 75px;
     border-radius: 50px;
     border: 4px solid #a80c0a;
-    cursor: pointer;
-    opacity: 0.5;   
+    grid-column: 2 span 2;
 }
 
 #circle3 {
     background: yellow;
     padding: 75px;
-    border-radius: 50px;
+    border-radius: 50px; 
     border: 4px solid #ffd11c;
-    cursor: pointer; 
-    opacity: 0.5;  
+    grid-column: 1 span 2;
 }
 
 #circle4 {
@@ -49,24 +53,25 @@ body {
     padding: 75px;
     border-radius: 50px;
     border: 4px solid #31498e;
-    cursor: pointer; 
-    opacity: 0.5;  
+    grid-column: 2 span 2;
+}
+
+.buttons {
+    border-radius: 25px;
+    cursor: pointer;  
+    height: 500px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
 }
 
 .start, .quit {
+    background: white;
+    border-radius: 10px;
     font-size: 30px;
     font-family: 'Muli', sans-serif;
-    background: white;
-    border-radius: 25px;
-    cursor: pointer;    
-}
-
-.start {
-    left: 580px;
-}
-
-.quit {
-    left: 640px;
+    text-align: center;
+    margin: 25px;
 }
 
 .hamburger {
