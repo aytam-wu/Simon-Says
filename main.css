@@ -11,21 +11,25 @@ body {
     margin: 0% auto;
 }
 
+.button:hover{
+    opacity: 0.5;
+}
+
 .allCircles {
     display: grid;
     grid-template-columns: 100px 100px;
     grid-gap: 30px 95px;
     border-radius: 50px;
     cursor: pointer;  
-    opacity: 0.75;
+    opacity: 1;
     height: 350px;
     width: 350px;
     margin: auto;
     padding: 25px 0px 25px;
 }
 
-#circle {
-    background: green;
+#circle1 {
+    background: #519961;
     padding: 75px;
     border-radius: 50px;
     border: 4px solid #40604e;
@@ -33,7 +37,7 @@ body {
 }
 
 #circle2 {
-    background: red;
+    background: #f95c5c;
     padding: 75px;
     border-radius: 50px;
     border: 4px solid #a80c0a;
@@ -41,7 +45,7 @@ body {
 }
 
 #circle3 {
-    background: yellow;
+    background: #ffec63;
     padding: 75px;
     border-radius: 50px; 
     border: 4px solid #ffd11c;
@@ -49,7 +53,7 @@ body {
 }
 
 #circle4 {
-    background: blue;
+    background: #4f6af2;
     padding: 75px;
     border-radius: 50px;
     border: 4px solid #31498e;
