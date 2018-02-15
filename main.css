@@ -72,7 +72,7 @@ body {
     font-family: 'Muli', sans-serif;
     text-align: center;
     margin: 25px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #hamburger {
