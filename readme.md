@@ -1,4 +1,4 @@
-**Author:** Ai Yen Tam\s\s
+**Author:** Ai Yen Tam<br>
 **Cohort:** WDI 21
 **Git Page:** https://aiyentam.github.io/Simon-Says/
 
