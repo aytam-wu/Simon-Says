@@ -26,6 +26,7 @@ var roundStart = function() {
     if(started && !quit){
         for(var i = 0; i < circles.length; i++){
             circles[i].addEventListener('click', function(){
+                $(this).fadeTo('fast', 0.5).fadeTo('fast', 1);
                 var circleId = this.getAttribute('id'); // this circle
                 userInput.push(parseInt(circleId.charAt(circleId.length - 1))); // grabbing last user input's circle array
                 roundStart(); // running program again
@@ -38,8 +39,9 @@ var roundStart = function() {
     if(started){
         simonSaysArray.push(Math.floor(Math.random()*4)+1);
         simonSays(simonSaysArray); // flashing circles
-        started = false;
+        started = false; 
     }
+
 // checking userInput and simonSaysArray
     for(var i = 0; i < userInput.length; i++){
         if(JSON.stringify(userInput) === JSON.stringify(simonSaysArray)){  // array becomes a string
@@ -47,11 +49,12 @@ var roundStart = function() {
             simonSaysArray.push(Math.floor(Math.random()*4)+1);
             simonSays(simonSaysArray); // simonSaysArray takes the array and flashs circles
             score++;
-            var scoretext = document.getElementById('score');
+            var scoretext = document.getElementById('score'); // score
             scoretext.innerText = '' + score;
             roundStart(); // runs program again
             break;
         }
+    
         // checking userInput and simonSaysArray if they do not match up
         if(userInput[i] !== simonSaysArray[i]){
             userInput = [];
