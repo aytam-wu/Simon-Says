@@ -74,10 +74,14 @@ body {
     margin: 25px;
 }
 
-.hamburger {
+#hamburger {
     cursor: pointer;
     padding-left: 15px;
-    padding-top: 10px;
+    text-align: right;
+}
+
+#hamburger :hover {
+    color: white;
 }
 
 #menu {
@@ -91,7 +95,7 @@ body {
 h1 {
     text-align: center;
     font-family: 'Fredoka One', cursive;
-    font-size: 35px;
+    font-size: 45px;
     margin: 0% auto;
 }
 
@@ -100,5 +104,29 @@ h2, h3 {
     padding-right: 300px;
     padding-top: 10px;
     font-family: 'Fredoka One', cursive;
+    font-size: 30px;
     margin: 0% auto;
 }
+
+p {
+    font-family: 'Fredoka One', cursive;
+    text-align: center;
+    font-size: 35px;
+}
+
+#backToGame {
+    border-radius: 25px;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+}
+
+#backToGame a{
+    text-decoration: none;
+    color: black;
+}
+
+#backToGame a:hover{
+    text-decoration: none;
+    color: #73937d;
+}
+
