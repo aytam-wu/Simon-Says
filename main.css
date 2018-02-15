@@ -108,6 +108,13 @@ h2, h3 {
     margin: 0% auto;
 }
 
+h4 {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    font-size: 35px;
+    margin: 0% auto; 
+}
+
 p {
     font-family: 'Fredoka One', cursive;
     text-align: center;
@@ -118,6 +125,7 @@ p {
     border-radius: 25px;
     font-size: 25px;
     font-family: 'Fredoka One', cursive;
+    padding: 15px;
 }
 
 #backToGame a{
@@ -130,3 +138,19 @@ p {
     color: #73937d;
 }
 
+#instructions {
+    border-radius: 25px;
+    font-size: 25px;
+    font-family: 'Fredoka One', cursive;
+    padding: 15px;
+}
+
+#instructions a{
+    text-decoration: none;
+    color: black;
+}
+
+#instructions a:hover{
+    text-decoration: none;
+    color: #73937d;
+}
