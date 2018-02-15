@@ -72,6 +72,7 @@ body {
     font-family: 'Muli', sans-serif;
     text-align: center;
     margin: 25px;
+    overflow: hidden;
 }
 
 #hamburger {
@@ -153,4 +154,13 @@ p {
 #instructions a:hover{
     text-decoration: none;
     color: #73937d;
+}
+
+.introBack {
+    margin-left: 150px;
+    margin-bottom: none;
+}
+
+.scorePlacement {
+    padding-right: 200px;
 }
