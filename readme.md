@@ -1,5 +1,5 @@
 **Author:** Ai Yen Tam<br>
-**Cohort:** WDI 21
+**Cohort:** WDI 21<br>
 **Git Page:** https://aiyentam.github.io/Simon-Says/
 
 # Instructions:
